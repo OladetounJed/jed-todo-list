@@ -58,16 +58,14 @@ link.className = "delete-task";
 link.innerHTML = '<i class="fas fa-trash-alt"></i>';
 
 //Append a Element to Li Element
-
-
-
 li.appendChild(link);
 
 
-
 //Append Li to Ul (Task COllection)
-
 taskCollection.appendChild(li);
+
+//Store In Local Storage 
+storeTaskInLocalStorage(newTask.value);
 
 newTask.value = '';
     }
@@ -76,6 +74,21 @@ newTask.value = '';
 e.preventDefault();
 
 };
+
+//Store Task
+
+function storeTaskInLocalStorage(newTask) {
+    let tasks;
+    if(localStorage.getItem('tasks') === null){
+        tasks = [];
+    }else {
+        tasks =JSON.parse(localStorage.getItem('tasks'));
+    }
+
+    tasks.push(newTask);
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
 //Remove Task
 
