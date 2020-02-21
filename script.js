@@ -59,6 +59,8 @@ link.innerHTML = '<i class="fas fa-trash-alt"></i>';
 
 //Append a Element to Li Element
 
+
+
 li.appendChild(link);
 
 
