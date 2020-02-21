@@ -96,8 +96,20 @@ function clearTasks(e){
 
 //Filter Tasks
 
-function filterTask(){
-    
+function filterTask(e){
+    const text = e.target.value.toLowerCase();
+
+   document.querySelectorAll('.collection-item').forEach(function(newTask){
+        const item = newTask.firstChild.textContent;
+
+        if (item.toLowerCase().indexOf(text) != -1){
+                newTask.style.display = 'block';
+        }
+
+       else{
+           newTask.style.display = 'none';
+       }
+   })
 }
 
 loadEventListeners();
