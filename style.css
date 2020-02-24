@@ -42,7 +42,17 @@ input {
     border-radius: 2em;
     color: white;
     font-size: 1rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+    
+    
 
+}
+
+.submit-btn:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    cursor: pointer;
 }
 
 .task-con-header {
@@ -83,8 +93,10 @@ li {
     text-decoration: none;
     background-color: #41B883;
     color: black;
-    padding: 1em 4em;
+    padding: 1em 3.7em;
     border-radius: 2em;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
     
 }
 
@@ -105,11 +117,11 @@ li {
     }
 
     .submit-btn {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
     }
 
     li {
-        font-size: 1rem ;
+        font-size: 0.8rem ;
     }
 
     
